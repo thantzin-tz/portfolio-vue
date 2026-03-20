@@ -1,0 +1,238 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth transition-colors duration-500;
+  }
+  
+  body {
+    @apply bg-white text-black dark:bg-black dark:text-white transition-colors duration-500;
+  }
+
+  /* Theme color tokens (light mode defaults). Toggle via .dark on <html> */
+  :root {
+    --bg: 255 255 255;
+    --text-primary: 17 24 39; /* gray-900 */
+    --text-secondary: 75 85 99; /* gray-600 */
+    --text-muted: 148 163 184; /* gray-400 */
+    --glass-bg: 255 255 255 / 0.08; /* rgba fallback */
+    --glass-border: 255 255 255 / 0.08;
+    --accent: 168 85 247; /* purple */
+    --button-bg: 17 24 39; /* dark button */
+    --placeholder: 0 0 0 / 0.35;
+  }
+
+  .dark {
+    --bg: 0 0 0;
+    --text-primary: 255 255 255; /* white */
+    --text-secondary: 235 235 235; /* near-white */
+    --text-muted: 255 255 255 / 0.55;
+    --glass-bg: 8 8 10 / 0.06;
+    --glass-border: 255 255 255 / 0.06;
+    --accent: 168 85 247;
+    --button-bg: 255 255 255; /* light button in dark mode */
+    --button-text: 17 24 39;
+    --placeholder: 255 255 255 / 0.55;
+  }
+
+  /* Make form controls inherit the current text color so they follow light/dark mode */
+  input,
+  textarea,
+  select,
+  button {
+    color: inherit;
+    caret-color: currentColor;
+    background-color: transparent;
+  }
+
+  /* Placeholder colors that respond to theme tokens */
+  input::placeholder,
+  textarea::placeholder {
+    color: color-mix(in srgb, rgb(var(--placeholder)) 100%, transparent);
+  }
+
+  /* Ensure headings use primary text color and are visible in both modes */
+  h1, h2, h3, h4, h5, h6 {
+    color: rgb(var(--text-primary));
+  }
+}
+
+@layer components {
+  .glass {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .glass-card {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: all .3s;
+  }
+
+  .glass-navbar {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: all .3s;
+  }
+
+  .glass-chat {
+    background-color: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1.25rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+
+  .glass-footer {
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1.5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+
+  .glass-button {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: .75rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transition: all .25s;
+  }
+
+  .dark .glass-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .glass-navbar {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .dark .glass-chat {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  .dark .glass-footer {
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1.5px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .dark .glass-button {
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1.5px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .btn-primary {
+    background-color: rgb(var(--button-bg));
+    color: rgb(var(--button-text));
+    padding: .9rem 1.25rem;
+    border-radius: .75rem;
+  }
+
+  .text-primary { color: rgb(var(--text-primary)); }
+  .text-secondary { color: rgb(var(--text-secondary)); }
+  .text-muted { color: color-mix(in srgb, rgb(var(--text-muted)) 100%, transparent); }
+
+  .glass-hover {
+    transition: all .3s ease;
+  }
+
+  .glass-hover:hover {
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+    transform: translateY(-2px);
+  }
+
+  .dark .glass-hover:hover {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+    transform: translateY(-2px);
+  }
+
+  .hover-glow {
+    transition: all .3s;
+  }
+
+  .hover-glow:hover {
+    color: rgb(var(--button-text));
+    filter: drop-shadow(0 0 8px rgba(var(--accent), 0.6));
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400;
+  }
+}
+
+/* Alternate section backgrounds to improve separation in dark mode */
+main > section {
+  transition: background-color .35s ease;
+}
+
+/* Light mode: subtle alternation */
+main > section:nth-of-type(odd) {
+  background-color: transparent;
+}
+main > section:nth-of-type(even) {
+  background-color: rgba(0,0,0,0.02);
+}
+
+/* Dark mode: alternate slightly lighter/darker strips for clarity */
+.dark main > section:nth-of-type(odd) {
+  background-color: rgba(255,255,255,0.02);
+}
+.dark main > section:nth-of-type(even) {
+  background-color: rgba(255,255,255,0.04);
+}
+
+/* Base glass helper so components using `glass` get consistent theming */
+.glass {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.dark .glass {
+  background-color: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Chat-specific tweak: make teleported chat slightly brighter in dark mode */
+.dark .glass.chat-panel,
+.dark .glass.chat {
+  background-color: rgba(255,255,255,0.03);
+}
+

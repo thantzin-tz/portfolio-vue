@@ -47,7 +47,7 @@ export const translations = {
           id: 'drum',
           title: 'Drum Kit Player',
           desc: 'An interactive web-based drum kit player built with JavaScript.',
-          img: '/images/drum.png',
+          img: '../images/drum.png',
           live: 'https://thantzin-tz.github.io/drum-kit/',
           repo: 'https://github.com/thantzin-tz/drum-kit'
         },
@@ -55,7 +55,7 @@ export const translations = {
           id: 'simon',
           title: 'Simon Game',
           desc: 'A classic memory game built with JavaScript and CSS animations.',
-          img: '/images/simon.png',
+          img: '../images/simon.png',
           live: 'https://thantzin-tz.github.io/simon-game/',
           repo: 'https://github.com/thantzin-tz/simon-game'
         },
@@ -63,7 +63,7 @@ export const translations = {
           id: 'dice',
           title: 'Dice Game',
           desc: 'A simple and fun dice rolling game for two players.',
-          img: '/images/dicegame.png',
+          img: '../images/dicegame.png',
           live: 'https://thantzin-tz.github.io/dicegame/',
           repo: 'https://github.com/thantzin-tz/dicegame'
         },
@@ -71,7 +71,7 @@ export const translations = {
           id: 'click2eat',
           title: 'Click2Eat',
           desc: 'A food ordering and management platform concept.',
-          img: '/images/click2eat.png',
+          img: '../images/click2eat.png',
           live: 'https://github.com/thantzin-tz/Click2Eat',
           repo: 'https://github.com/thantzin-tz/Click2Eat'
         },
@@ -79,7 +79,7 @@ export const translations = {
           id: 'gym',
           title: 'Gym Management System',
           desc: 'A comprehensive system for managing gym memberships and operations.',
-          img: '/images/gym.png',
+          img: '../images/gym.png',
           live: 'https://github.com/thantzin-tz/Gym-Management-System',
           repo: 'https://github.com/thantzin-tz/Gym-Management-System'
         },
@@ -214,7 +214,7 @@ export const translations = {
           id: 'drum',
           title: 'ドラムキットプレーヤー',
           desc: 'JavaScriptで構築されたインタラクティブなウェブベースのドラムキットプレーヤー。',
-          img: '/images/drum.png',
+          img: '../images/drum.png',
           live: 'https://thantzin-tz.github.io/drum-kit/',
           repo: 'https://github.com/thantzin-tz/drum-kit'
         },
@@ -222,7 +222,7 @@ export const translations = {
           id: 'simon',
           title: 'サイモンゲーム',
           desc: 'JavaScriptとCSSアニメーションで構築されたクラシックな記憶ゲーム。',
-          img: '/images/simon.png',
+          img: '../images/simon.png',
           live: 'https://thantzin-tz.github.io/simon-game/',
           repo: 'https://github.com/thantzin-tz/simon-game'
         },
@@ -230,7 +230,7 @@ export const translations = {
           id: 'dice',
           title: 'ダイスゲーム',
           desc: '2人用のシンプルで楽しいサイコロ転がしゲーム。',
-          img: '/images/dicegame.png',
+          img: '../images/dicegame.png',
           live: 'https://thantzin-tz.github.io/dicegame/',
           repo: 'https://github.com/thantzin-tz/dicegame'
         },
@@ -238,7 +238,7 @@ export const translations = {
           id: 'click2eat',
           title: 'Click2Eat',
           desc: '食品注文および管理プラットフォームのコンセプト。',
-          img: '/images/click2eat.png',
+          img: '../images/click2eat.png',
           live: 'https://github.com/thantzin-tz/Click2Eat',
           repo: 'https://github.com/thantzin-tz/Click2Eat'
         },
@@ -246,7 +246,7 @@ export const translations = {
           id: 'gym',
           title: 'ジム管理システム',
           desc: 'ジムの会員資格と運営を管理するための包括的なシステム。',
-          img: '/images/gym.png',
+          img: '../images/gym.png',
           live: 'https://github.com/thantzin-tz/Gym-Management-System',
           repo: 'https://github.com/thantzin-tz/Gym-Management-System'
         },

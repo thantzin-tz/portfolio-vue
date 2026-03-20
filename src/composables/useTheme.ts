@@ -24,7 +24,7 @@ export function useTheme() {
       isDark.value = savedTheme === 'dark';
     } else {
       // Default to dark as requested
-      isDark.value = true;
+      isDark.value = false;
     }
     updateTheme();
   });

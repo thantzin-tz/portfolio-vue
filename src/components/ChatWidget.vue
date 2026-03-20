@@ -24,7 +24,7 @@
     >
       <div 
         v-if="isOpen"
-        class="absolute bottom-20 right-0 w-[380px] max-w-[calc(100vw-2rem)] h-[550px] glass rounded-[2.5rem] flex flex-col overflow-hidden shadow-2xl shadow-black/50 bg-white/90 dark:bg-black/80"
+        class="absolute bottom-20 right-0 w-[380px] max-w-[calc(100vw-2rem)] h-[550px] glass rounded-[2.5rem] flex flex-col overflow-hidden shadow-2xl shadow-black/50"
       >
         <!-- Header -->
   <div class="p-6 bg-white/20 dark:bg-black/60 border-b border-white/10 dark:border-white/12 flex items-center justify-between">

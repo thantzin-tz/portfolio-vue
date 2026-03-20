@@ -40,7 +40,7 @@ const closeMobileMenu = () => {
 <template>
   <nav 
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 glass-navbar"
-    :class="[isScrolled ? 'bg-white/50 dark:bg-black/50 py-3 shadow-lg shadow-black/20' : 'bg-white/30 dark:bg-black/30']"
+    :class="[isScrolled ? 'py-3 shadow-lg shadow-black/20' : 'bg-white/30 dark:bg-black/30']"
   >
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <!-- Logo -->
@@ -48,7 +48,6 @@ const closeMobileMenu = () => {
         <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center shadow-lg shadow-purple-500/20 group-hover:scale-110 transition-transform duration-300">
           <span class="text-white font-bold text-xl">TZL</span>
         </div>
-        <!-- <span class="text-xl font-display font-bold tracking-tight text-primary hover-glow transition-all">THANT ZIN LIN</span> -->
       </a>
 
       <!-- Desktop Nav -->

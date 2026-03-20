@@ -13,9 +13,9 @@ const { t } = inject('i18n') as any;
         <div class="flex flex-col items-center md:items-start gap-4">
           <div class="flex items-center gap-2">
             <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center">
-              <span class="text-white font-bold text-sm">P</span>
+              <span class="text-white font-bold text-sm">TZL</span>
             </div>
-            <span class="text-lg font-display font-bold tracking-tight text-primary">PORTFOLIO</span>
+            <span class="text-lg font-display font-bold tracking-tight text-primary">THANT ZIN LIN</span>
           </div>
           <p class="text-secondary text-sm">
             {{ t('footer.rights') }}
